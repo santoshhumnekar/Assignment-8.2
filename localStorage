@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>HTML 5 local Storage</title>
+    <script src="../javascript/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../javascript/app.js"></script>
+    <style type="text/css" src="../css/app.css"></style>
+</head>
+
+<body onload="initialLoad()">
+    <center>
+        <div>
+            <h1>MySelfieTech </h1>
+            <div id="main" style="margin-top:100px;">
+                <button onclick="login()" class="button">Login</button>
+                <button onclick="signup()">SignUp</button>
+            </div>
+
+            <div id="login"><label>Login</label>
+                <form onsubmit="loginSubmit()" action="#">
+                    <input type="email" id="login-email" placeholder="Email" required><br>
+                    <input type="password" id="login-password" placeholder="Password" required><br>
+                    <input type="submit" value="Submit Query"></form><label id="errorMsg"></label>
+                <button class="back-button" onclick="initialLoad()" style="margin-top:20px;margin-left:200px;">back</button>
+            </div>
+            <div id="signup"><label>SignUp</label>
+                <form onsubmit="signupSubmit()" action="#">
+                    <input type="text" id="signup-name" placeholder="Name" required><br>
+                    <input type="email" id="signup-email" placeholder="Email" required><br>
+                    <input type="password" id="signup-password" placeholder="Password" required><br>
+                    <input type="submit" value="Submit Query">
+                </form>
+                <button class="back-button" onclick="initialLoad()" style="margin-top:20px;margin-left:200px;">back</button>
+            </div>
+            <div id="home"><label>Welcome to <span id="loggedInUser"></span></label>
+                <div><button class="back-button" onclick="logout()" style="margin-top:20px;margin-left:200px;">Logout</button></div>
+            </div>
+        </div>
+    </center>
+</body>
+
+</html>
